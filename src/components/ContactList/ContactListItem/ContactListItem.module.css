@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.button {
+    padding: 5px;
+  margin-left: 10px;
+  background-color: gray;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: red;
+  color: white;
+}
