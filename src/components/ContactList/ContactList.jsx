@@ -1,28 +1,24 @@
-import { Component } from 'react';
+// import { useState } from 'react';
 import { ContactListItem } from './ContactListItem/ContactListItem';
 import PropTypes from 'prop-types';
 
-export class ContactList extends Component {
-  state = {
-    name: '',
-  };
+export function ContactList({ contacts, onDelete }) {
+  console.log('contacts: ', contacts);
+  // const [name, setName] = useState('');
 
-  render() {
-    const { contacts, onDelete } = this.props;
-    return (
-      <ul>
-        {contacts.map(({ name, number, id }) => (
-          <ContactListItem
-            key={id}
-            name={name}
-            number={number}
-            id={id}
-            deleteContact={onDelete}
-          />
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <ul>
+      {contacts.map(({ name, number, id }) => (
+        <ContactListItem
+          key={id}
+          name={name}
+          number={number}
+          id={id}
+          deleteContact={onDelete}
+        />
+      ))}
+    </ul>
+  );
 }
 
 ContactList.propTypes = {
