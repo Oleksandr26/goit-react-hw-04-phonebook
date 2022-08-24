@@ -3,7 +3,7 @@ import { ContactListItem } from './ContactListItem/ContactListItem';
 import PropTypes from 'prop-types';
 
 export function ContactList({ contacts, onDelete }) {
-  console.log('contacts: ', contacts);
+  // console.log('contacts: ', contacts);
   // const [name, setName] = useState('');
 
   return (
